@@ -33,6 +33,13 @@ spec:
       containers:
       - name: backend
         image: santhan29/backend:v1 
+        resources:
+          requests:
+            cpu: 100m
+            memory: 128Mi
+          limits:  #limits should be greater than or equal to requests not less than 
+            cpu: 100m 
+            memory: 128Mi 
         envFrom:
         - configMapRef:
             name: backend

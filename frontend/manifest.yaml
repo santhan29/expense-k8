@@ -84,6 +84,8 @@ data:
         root   /usr/share/nginx/html;
      }
 
+     # this is part of nginx configmap 
+
      location /api/ { 
         proxy_pass http://backend:8080/; 
      }

@@ -127,7 +127,7 @@ spec:
             cpu: 100m 
             memory: 128Mi 
         volumeMounts:
-          - name: frontend 
+          - name: nginx-conf
             mountPath: /etc/nginx/nginx.conf
             subPath: nginx.conf
             readOnly: true

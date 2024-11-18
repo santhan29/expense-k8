@@ -174,12 +174,12 @@ spec:
 ---
 apiVersion: elbv2.k8s.aws/v1beta1
 kind: TargetGroupBinding
-metadata:
+metadata:    # it will add the pods to target grp frontend which are running under frontend service
   name: frontend
   namespace: expense1
 spec:
   serviceRef:
     name: frontend # route traffic to the awesome-service
-    port: 80
+    port: 80  
   targetGroupARN: arn:aws:elasticloadbalancing:us-east-1:361769595563:targetgroup/expense-dev/7ef4ef37fa4f5913 
-  targetType: ip 
+  targetType: ip  #these ar pod ip addresses 
